@@ -1,7 +1,7 @@
 version: '2'
 services:
   web:
-    image: httpd
+    image: httpd:2.4
     ports:
       - "80:80"
     links:
@@ -23,14 +23,14 @@ services:
       - "24224:24224/udp"
 
   elasticsearch:
-    image: elasticsearch
+    image: elasticsearch:6.8.7
     expose:
       - 9200
     ports:
       - "9200:9200"
 
   kibana:
-    image: kibana
+    image: kibana:6.8.7
     links:
       - "elasticsearch"
     ports:
