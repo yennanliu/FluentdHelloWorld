@@ -6,6 +6,10 @@
 ## Quick Start
 
 ```bash 
+# STEP 0)
+# config
+subl /etc/td-agent/td-agent.conf
+
 # STEP 1) 
 # launch the fluentd agent (fluentd via td-agent)
 sudo launchctl load /Library/LaunchDaemons/td-agent.plist
@@ -13,7 +17,7 @@ sudo launchctl load /Library/LaunchDaemons/td-agent.plist
 # check the log
 less /var/log/td-agent/td-agent.log
 
-# Step the fluentd agent 
+# Stop the fluentd agent 
 sudo launchctl unload /Library/LaunchDaemons/td-agent.plist
 
 # STEP 2)
